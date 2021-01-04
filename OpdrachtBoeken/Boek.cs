@@ -4,9 +4,9 @@ using System.Text;
 
 namespace OpdrachtBoeken
 {
-    class Boek : IVoorwerpen
+    public abstract class Boek : IVoorwerpen
     {
-        public Boek(string titel, string auteur, decimal aankoopprijs, Genre genre)
+        public  Boek(string titel, string auteur, decimal aankoopprijs, Genre genre)
         {
             Titel = titel;
             Auteur = auteur;
@@ -26,5 +26,19 @@ namespace OpdrachtBoeken
         public Genre Genre { get; set; }
 
         public virtual decimal Winst => throw new NotImplementedException();
+
+
+        public virtual void Print()
+        {
+            Console.WriteLine(" ");
+            Console.WriteLine($"Titel: {Titel}");
+            Console.WriteLine($"Auteur: {Auteur}");
+            Console.WriteLine($"Eigenaar: {Eigenaar}");
+            Console.WriteLine($"Genre: {Genre}");
+            Console.WriteLine($"Aankoopprijs: {Aankoopprijs} EUR");
+            Console.WriteLine($"Winst: {Winst} EUR");
+            
+            
+        }
     }
 }
