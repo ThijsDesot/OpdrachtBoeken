@@ -6,7 +6,8 @@ namespace OpdrachtBoeken
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Test");
+            Boek boekske = new Boek();
+            Console.WriteLine(boekske.Eigenaar);
         }
     }
 }
