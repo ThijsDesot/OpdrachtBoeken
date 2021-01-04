@@ -14,14 +14,7 @@ namespace OpdrachtBoeken
             Naam = naam;
             DGroep = new Doelgroep(leeftijd);
         }
-
-        public Genre(string naam, Doelgroep doelgroep)
-        {
-            Naam = naam;
-            DGroep = doelgroep;
-        }
-
-
+       
         public class Doelgroep
         {
             public int Leeftijd { get; set; }
